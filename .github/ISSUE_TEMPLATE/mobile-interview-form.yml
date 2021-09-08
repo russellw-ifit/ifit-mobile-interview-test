@@ -1,0 +1,82 @@
+name: Mobile Interview Form
+description: Mobile interview schedule and feedback form
+title: "[HIR-0]"
+labels: Mobile
+body:
+- type: checkboxes
+  attributes:
+    label: Prerequisites
+    options:
+    - label: Pre-interview coding challenge at [hackerrank](https://www.hackerrank.com/). Passing score is TBD.
+      required: true
+- type: markdown
+  attributes:
+    value: |
+      ## Agenda
+
+      > Is now still a good time to talk?
+
+      We respect the candidate's time and want them to be at their best.
+
+      ##
+
+      Interviews are 90 minutes long...
+      1. The first 30 minutes should be spent asking technical questions about the candidate's experience, skills, etc. Get to know the candidate and encourage discussion about a highlight of their recent professional experience.
+      1. _Optionally, 45 minute pair programming exercise?_
+      1. 15 minutes for any questions from the candidate about iFIT or the position and next steps.
+
+      ## Introductions
+
+      Introduce yourself and interview partner and ask the candidate to introduce themselves.
+
+      ##
+- type: textarea
+  attributes:
+    label: 1. What is meant by Continuous Integration (CI) and Continuous Delivery (CD)?
+    description: 
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      Continuous Integration (CI) is the automation of builds and testing for code changes when contributors merge into source control.
+      <br /><br />
+      Continuous Delivery (CD) extends CI adding an automated process to configure and deploy builds to a testing or production environment.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 2. Describe a CI/CD pipeline you have managed. What kind of tasks do you have in the pipeline?
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      Look for mobile experience and relevant technologies.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: Notes
+    description: |
+      Any other notes or feedback regarding the candidate.
+  validations:
+    required: false
