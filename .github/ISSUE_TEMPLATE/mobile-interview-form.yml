@@ -1,7 +1,7 @@
 name: Mobile Interview Form
 description: Mobile interview schedule and feedback form
 title: "[HIR-0]"
-labels: Mobile
+labels: ["Mobile"]
 body:
 - type: checkboxes
   attributes:
@@ -33,7 +33,6 @@ body:
 - type: textarea
   attributes:
     label: 1. What is meant by Continuous Integration (CI) and Continuous Delivery (CD)?
-    description: 
   validations:
     required: true
 - type: markdown
@@ -55,7 +54,6 @@ body:
 - type: textarea
   attributes:
     label: 2. Describe a CI/CD pipeline you have managed. What kind of tasks do you have in the pipeline?
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   validations:
     required: false
 - type: markdown
@@ -73,6 +71,287 @@ body:
       </tr>
       </table>
       </details>
+- type: textarea
+  attributes:
+    label: 3. What kind of things have you put into a CI/CD pipeline that help your teams maintain code quality?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 4. What scripting languages do you use?
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      Bash, Groovy, preferably Gradle or Kotlin (Android) and Ruby (iOS). Do their scripts have unit tests?
+      <br /><br />
+      How do you take scripting to the next level? How can your scripts be more maintainable?
+      <br /><br />
+      The scripting language used isn't as important as the candidate's experience and ability to speak about that experience.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 5. Are you familiar with Unix-like environments? What Unix tools/commands do you like to use when building automation scripts?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 6. What are some things you automate with scripts in your CI/CD pipeline?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 7. How do you notify users of the CI/CD pipeline of the current build status?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 8. What do you do when the CI/CD pipeline breaks? What kinds of problems have broken your CI/CD pipeline?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 9. Does your pipeline automate deploying software (to the web or mobile)? How does your deployment work?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 10. How does a mobile CI/CD pipeline differ from other CI/CD flows? Are there special considerations for mobile?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 11. Security considerations for the CI/CD pipeline? Best practices?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 12. How do you “idiot proof” the pipeline so it’s easy for developers to use and is safe from being broken by your users?
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      Look for a "1-click" process that kicks off the build and automates releases to TestFlight and/or app stores, handling certificate and provisioning profile management as necessary.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 13. What tools do you use for running regularly scheduled tasks?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 14. What kinds of automation do you make available for developers (running build variants, distributing builds to testers, etc.)?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 15. How do you make automated tasks available to your CI/CD pipeline users (scripts, CI/CD tooling features, etc.)?
+  validations:
+    required: false
+- type: checkboxes
+  attributes:
+    label: 16. Are you familiar with the following?
+    options:
+      - label: Gradle
+      - label: GitHub Actions
+      - label: Writing/maintaining Gradle plugins
+      - label: Writing command line apps in Kotlin (nice to have)
+- type: textarea
+  attributes:
+    label: 17. What are some ways you can make your pipeline more stable and higher quality?
+    description: |
+      How do you test scripts and processes? Can this be automated (i.e. can you unit test your scripts)?
+      How could you make platform tools more maintainable? How would you feel about using languages other than bash/sh to run automated tools? What are problems of using “non-traditional” scripting languages?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 18. Are you familiar with Whitesource? How did you use Whitesource on your project?
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      <a href="https://docs.renovatebot.com/">Whitesource Renovate</a>:
+      <p>
+      Renovate (often referred to as "Renovate Bot") is an Open Source tool designed to automate the process of:
+      <ul>
+      <li>Detecting dependencies in a repository (including both Open Source as well as private/closed source)</li>
+      <li>Checking if there are newer versions which can be updated to</li>
+      <li>Creating commits and Merge/Pull Requests to apply such changes, and include Release Notes if available</li>
+      </ul>
+      </p>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      Whitesource Open Source License Compliance:
+      <p>
+      <blockquote>
+      When you use open source components, you sign implicit legal contracts. Every open source component, as well as any component on which it may depend, has a license which you must comply with its own terms and conditions.
+      <br /><br />
+      With more than 200 different open source licenses out there, each with its own terms and conditions, some copy-left (viral), some permissive, some permissive with strings, and others with no open source license at all (for which default copyright laws apply), it’s tough to keep track of and fulfill all the legal requirements.
+      <br /><br />
+      With WhiteSource, it’s all automatic. Whenever a new open source component is added to the build, WhiteSource identifies its license and any licenses attached to any of its dependencies."
+      <br /><br />
+      WhiteSource also lets you create your company’s license policy by defining a white list of automatically approved licenses; a black list of automatically rejected licenses (choose to get an alert and/or fail the build when a component or dependency with one of these is added); and a list of licenses that need to be approved on a case-by-case basis. These initiate a pre-defined email approval request, with all approvals tracked, signed and archived within the WhiteSource system for later access.
+      </blockquote>
+      </p>
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 19. Are you familiar with fastlane?
+    description: https://fastlane.tools/
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      <blockquote>
+      fastlane is an open source platform aimed at simplifying Android and iOS deployment.
+      <br />
+      fastlane lets you automate every aspect of your development and release workflow.
+      </blockquote>
+      fastlane allows automating generating screenshots, handling code signing, and beta and app store deployment. Includes CI support.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 20. Are you familiar with Swift Package Manager?
+    description: https://swift.org/package-manager/
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      <blockquote>
+      The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+      <br />
+      The Package Manager is included in Swift 3.0 and above.
+      </blockquote>
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 21. Do you have any experience with Ruby?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 22. Are you familiar with how TestFlight works?
+    description: https://testflight.apple.com/
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      TestFlight for Apple development eases inviting users to test your apps and collect feedback before release to the App Store.
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 23. Have you used SonarCloud in your CI/CD environments?
+    description: https://sonarcloud.io/
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 24. Have you used SwiftDoc or other automated documentation generation tools (Doxygen, Javadoc, etc.)?
+    description: https://github.com/swiftdocorg/swift-doc
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      <details>
+      <summary>Discussion</summary>
+
+      <table>
+      <tr>
+      <td>
+      <blockquote>
+      A package for generating documentation for Swift projects.
+      <br />
+      Given a directory of Swift files, swift-doc generates HTML or CommonMark (Markdown) files for each class, structure, enumeration, and protocol as well as top-level type aliases, functions, and variables.
+      </blockquote>
+      </td>
+      </tr>
+      </table>
+      </details>
+- type: textarea
+  attributes:
+    label: 25. Are you familiar with Semantic Versioning?
+    description: https://semver.org/
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 26. Do you have any experience with provisioning and signing iOS applications? How about Android applications?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 27. Do you have any experience with file and string manipulation? For example, have you searched logs for specific phrases?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: 28. Have you ever used git before? How proficient would you consider yourself with it?
+  validations:
+    required: false
 - type: textarea
   attributes:
     label: Notes
