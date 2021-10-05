@@ -8,7 +8,7 @@ body:
     label: Prerequisites
     options:
     - label: Pre-interview coding challenge at [hackerrank](https://www.hackerrank.com/). Passing score is TBD.
-      required: true
+      required: false
 - type: markdown
   attributes:
     value: |
